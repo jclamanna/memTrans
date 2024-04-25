@@ -1,0 +1,883 @@
+Out of 1176 traces there were: 
+-159 complete traces
+-1017 incomplete traces
+Total Time Spent: 201.65 seconds
+------------------------------------------------------------------
+Complete #0: ['cytoplasm', 'central_scaffold2', 'cytoplasm']
+Frames: 2647-2649 
+Class: abortive_central_channel
+Dwell Time: 1 frame(s)
+Plotting complete traces...
+------------------------------------------------------------------
+Complete #1: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 2674-2676 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #2: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 3966-3968 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #3: ['cytoplasm', 'cytoplasmic_fibril', 'central_scaffold2', 'cytoplasm']
+Frames: 3979-3982 
+Class: abortive_central_channel
+Dwell Time: 2 frame(s)
+------------------------------------------------------------------
+Complete #4: ['cytoplasm', 'central_scaffold1', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 4256-4262 
+Class: abortive_central_channel
+Dwell Time: 3 frame(s)
+Average Distances:[('cytoplasm', 5.73)]
+------------------------------------------------------------------
+Complete #5: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'central_scaffold2', 'cytoplasmic_fibril', 'central_scaffold2', 'cytoplasm']
+Frames: 4344-4350 
+Class: abortive_central_channel
+Dwell Time: 5 frame(s)
+Average Distances:[('cytoplasmic_fibril', 10.84)]
+------------------------------------------------------------------
+Complete #6: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasm', 'cytoplasm', 'central_scaffold2', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 4492-4499 
+Class: abortive_central_channel
+Dwell Time: 3 frame(s)
+Average Distances:[('cytoplasm', 31.35), ('cytoplasm', 39.52)]
+------------------------------------------------------------------
+Complete #7: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 4737-4743 
+Class: docking_event
+Dwell Time: 5 frame(s)
+Average Distances:[('cytoplasmic_fibril', 36.68), ('cytoplasmic_fibril', 34.23), ('cytoplasmic_fibril', 32.14), ('cytoplasmic_fibril', 46.84)]
+------------------------------------------------------------------
+Complete #8: ['cytoplasm', 'central_scaffold2', 'central_scaffold1', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 4759-4763 
+Class: abortive_central_channel
+Dwell Time: 3 frame(s)
+------------------------------------------------------------------
+Complete #9: ['cytoplasm', 'cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 4966-4972 
+Class: docking_event
+Dwell Time: 3 frame(s)
+Average Distances:[('cytoplasm', 53.79), ('cytoplasm', 29.97), ('cytoplasmic_fibril', 17.45), ('cytoplasmic_fibril', 5.35)]
+------------------------------------------------------------------
+Complete #10: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 5111-5113 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #11: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 5180-5182 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #12: ['cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 5226-5231 
+Class: docking_event
+Dwell Time: 3 frame(s)
+Average Distances:[('cytoplasm', 38.14), ('cytoplasmic_fibril', 34.86), ('cytoplasmic_fibril', 6.34)]
+------------------------------------------------------------------
+Complete #13: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 5249-5251 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #14: ['cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 5257-5264 
+Class: docking_event
+Dwell Time: 4 frame(s)
+Average Distances:[('cytoplasm', 76.31), ('cytoplasmic_fibril', 28.05), ('cytoplasmic_fibril', 68.21)]
+------------------------------------------------------------------
+Complete #15: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 5277-5279 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #16: ['cytoplasm', 'cytoplasm', 'cytoplasm', 'cytoplasm', 'cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 5294-5301 
+Class: docking_event
+Dwell Time: 1 frame(s)
+Average Distances:[('cytoplasm', 60.99), ('cytoplasm', 25.29), ('cytoplasm', 7.02), ('cytoplasm', 63.01), ('cytoplasm', 39.93)]
+------------------------------------------------------------------
+Complete #17: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 5334-5336 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #18: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 5352-5357 
+Class: docking_event
+Dwell Time: 4 frame(s)
+Average Distances:[('cytoplasmic_fibril', 3.41), ('cytoplasmic_fibril', 14.01), ('cytoplasmic_fibril', 28.45)]
+------------------------------------------------------------------
+Complete #19: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 5425-5427 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #20: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 5438-5440 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #21: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 5631-5636 
+Class: docking_event
+Dwell Time: 2 frame(s)
+Average Distances:[('cytoplasm', 23.9)]
+------------------------------------------------------------------
+Complete #22: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 5691-5695 
+Class: docking_event
+Dwell Time: 3 frame(s)
+Average Distances:[('cytoplasmic_fibril', 21.21), ('cytoplasmic_fibril', 44.87)]
+------------------------------------------------------------------
+Complete #23: ['cytoplasm', 'central_scaffold2', 'central_scaffold2', 'cytoplasm']
+Frames: 5941-5944 
+Class: abortive_central_channel
+Dwell Time: 2 frame(s)
+Average Distances:[('central_scaffold2', 18.81)]
+------------------------------------------------------------------
+Complete #24: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 6066-6069 
+Class: docking_event
+Dwell Time: 2 frame(s)
+Average Distances:[('cytoplasmic_fibril', 43.74)]
+------------------------------------------------------------------
+Complete #25: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 6099-6101 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #26: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 6213-6216 
+Class: docking_event
+Dwell Time: 2 frame(s)
+Average Distances:[('cytoplasmic_fibril', 53.31)]
+------------------------------------------------------------------
+Complete #27: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 6235-6239 
+Class: docking_event
+Dwell Time: 3 frame(s)
+Average Distances:[('cytoplasmic_fibril', 64.36), ('cytoplasmic_fibril', 56.9)]
+------------------------------------------------------------------
+Complete #28: ['cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 6379-6384 
+Class: docking_event
+Dwell Time: 3 frame(s)
+Average Distances:[('cytoplasm', 40.38), ('cytoplasmic_fibril', 10.42), ('cytoplasmic_fibril', 10.5)]
+------------------------------------------------------------------
+Complete #29: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 6404-6407 
+Class: docking_event
+Dwell Time: 2 frame(s)
+Average Distances:[('cytoplasmic_fibril', 20.8)]
+------------------------------------------------------------------
+Complete #30: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 6411-6413 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #31: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 6455-6457 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #32: ['cytoplasm', 'central_scaffold2', 'central_scaffold2', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 6486-6490 
+Class: abortive_central_channel
+Dwell Time: 3 frame(s)
+Average Distances:[('central_scaffold2', 82.32)]
+------------------------------------------------------------------
+Complete #33: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 6502-6504 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #34: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 6515-6519 
+Class: docking_event
+Dwell Time: 3 frame(s)
+Average Distances:[('cytoplasmic_fibril', 27.51), ('cytoplasmic_fibril', 41.69)]
+------------------------------------------------------------------
+Complete #35: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 6537-6539 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #36: ['cytoplasm', 'cytoplasmic_fibril', 'central_scaffold2', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 6688-6692 
+Class: abortive_central_channel
+Dwell Time: 3 frame(s)
+------------------------------------------------------------------
+Complete #37: ['cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm', 'central_scaffold2', 'cytoplasm']
+Frames: 6725-6732 
+Class: abortive_central_channel
+Dwell Time: 4 frame(s)
+Average Distances:[('cytoplasm', 71.07), ('cytoplasmic_fibril', 19.87), ('cytoplasmic_fibril', 44.43)]
+------------------------------------------------------------------
+Complete #38: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 6833-6837 
+Class: docking_event
+Dwell Time: 2 frame(s)
+------------------------------------------------------------------
+Complete #39: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 6975-6977 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #40: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 7106-7111 
+Class: docking_event
+Dwell Time: 4 frame(s)
+Average Distances:[('cytoplasmic_fibril', 57.12), ('cytoplasmic_fibril', 17.2), ('cytoplasmic_fibril', 22.11)]
+------------------------------------------------------------------
+Complete #41: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 7195-7197 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #42: ['cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 7218-7221 
+Class: docking_event
+Dwell Time: 1 frame(s)
+Average Distances:[('cytoplasm', 28.85)]
+------------------------------------------------------------------
+Complete #43: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 7262-7264 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #44: ['cytoplasm', 'central_scaffold1', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 7271-7274 
+Class: abortive_central_channel
+Dwell Time: 2 frame(s)
+------------------------------------------------------------------
+Complete #45: ['cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'central_scaffold2', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 7376-7384 
+Class: abortive_central_channel
+Dwell Time: 6 frame(s)
+Average Distances:[('cytoplasm', 22.04), ('cytoplasmic_fibril', 12.99), ('cytoplasmic_fibril', 17.73), ('cytoplasmic_fibril', 63.71)]
+------------------------------------------------------------------
+Complete #46: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 7413-7416 
+Class: docking_event
+Dwell Time: 2 frame(s)
+Average Distances:[('cytoplasmic_fibril', 15.74)]
+------------------------------------------------------------------
+Complete #47: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 7475-7479 
+Class: docking_event
+Dwell Time: 2 frame(s)
+------------------------------------------------------------------
+Complete #48: ['cytoplasm', 'central_scaffold2', 'cytoplasm']
+Frames: 7522-7524 
+Class: abortive_central_channel
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #49: ['cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 7627-7631 
+Class: docking_event
+Dwell Time: 2 frame(s)
+Average Distances:[('cytoplasm', 10.74), ('cytoplasmic_fibril', 22.69)]
+------------------------------------------------------------------
+Complete #50: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 7659-7661 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #51: ['cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 7936-7939 
+Class: docking_event
+Dwell Time: 1 frame(s)
+Average Distances:[('cytoplasm', 24.42)]
+------------------------------------------------------------------
+Complete #52: ['cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 7976-7979 
+Class: docking_event
+Dwell Time: 1 frame(s)
+Average Distances:[('cytoplasm', 4.91)]
+------------------------------------------------------------------
+Complete #53: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 8066-8071 
+Class: docking_event
+Dwell Time: 3 frame(s)
+Average Distances:[('cytoplasmic_fibril', 20.47)]
+------------------------------------------------------------------
+Complete #54: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 8074-8076 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #55: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 8138-8144 
+Class: docking_event
+Dwell Time: 4 frame(s)
+Average Distances:[('cytoplasmic_fibril', 10.7), ('cytoplasmic_fibril', 36.67)]
+------------------------------------------------------------------
+Complete #56: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'central_scaffold2', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 8546-8552 
+Class: abortive_central_channel
+Dwell Time: 5 frame(s)
+Average Distances:[('cytoplasmic_fibril', 54.78), ('cytoplasmic_fibril', 37.64)]
+------------------------------------------------------------------
+Complete #57: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 8582-8591 
+Class: docking_event
+Dwell Time: 8 frame(s)
+Average Distances:[('cytoplasmic_fibril', 10.99), ('cytoplasmic_fibril', 56.54), ('cytoplasmic_fibril', 26.78), ('cytoplasmic_fibril', 9.25), ('cytoplasmic_fibril', 27.7), ('cytoplasmic_fibril', 39.46), ('cytoplasmic_fibril', 64.17)]
+------------------------------------------------------------------
+Complete #58: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 8634-8643 
+Class: docking_event
+Dwell Time: 6 frame(s)
+Average Distances:[('cytoplasmic_fibril', 41.77), ('cytoplasmic_fibril', 78.68), ('cytoplasmic_fibril', 35.48), ('cytoplasmic_fibril', 18.23), ('cytoplasm', 34.0)]
+------------------------------------------------------------------
+Complete #59: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 8658-8660 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #60: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 8692-8694 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #61: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 8716-8721 
+Class: docking_event
+Dwell Time: 3 frame(s)
+Average Distances:[('cytoplasmic_fibril', 25.3)]
+------------------------------------------------------------------
+Complete #62: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 8733-8737 
+Class: docking_event
+Dwell Time: 2 frame(s)
+------------------------------------------------------------------
+Complete #63: ['cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 8745-8755 
+Class: docking_event
+Dwell Time: 6 frame(s)
+Average Distances:[('cytoplasm', 62.05), ('cytoplasmic_fibril', 44.38), ('cytoplasmic_fibril', 21.86), ('cytoplasmic_fibril', 16.45)]
+------------------------------------------------------------------
+Complete #64: ['cytoplasm', 'central_scaffold2', 'cytoplasm']
+Frames: 8835-8837 
+Class: abortive_central_channel
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #65: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 8847-8849 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #66: ['cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 8851-8856 
+Class: docking_event
+Dwell Time: 3 frame(s)
+Average Distances:[('cytoplasm', 39.87), ('cytoplasmic_fibril', 30.22), ('cytoplasmic_fibril', 31.44)]
+------------------------------------------------------------------
+Complete #67: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 8861-8863 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #68: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 8925-8928 
+Class: docking_event
+Dwell Time: 2 frame(s)
+Average Distances:[('cytoplasmic_fibril', 19.96)]
+------------------------------------------------------------------
+Complete #69: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 8965-8967 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #70: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 9009-9011 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #71: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 9148-9150 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #72: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 9248-9250 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #73: ['cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 9252-9255 
+Class: docking_event
+Dwell Time: 1 frame(s)
+Average Distances:[('cytoplasm', 29.16)]
+------------------------------------------------------------------
+Complete #74: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 9315-9317 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #75: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 9361-9365 
+Class: docking_event
+Dwell Time: 2 frame(s)
+------------------------------------------------------------------
+Complete #76: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 9432-9434 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #77: ['cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 9483-9486 
+Class: docking_event
+Dwell Time: 1 frame(s)
+Average Distances:[('cytoplasm', 12.33)]
+------------------------------------------------------------------
+Complete #78: ['cytoplasm', 'central_scaffold2', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 9500-9505 
+Class: abortive_central_channel
+Dwell Time: 4 frame(s)
+Average Distances:[('cytoplasmic_fibril', 26.12), ('cytoplasmic_fibril', 47.83)]
+------------------------------------------------------------------
+Complete #79: ['cytoplasm', 'central_scaffold2', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'central_scaffold2', 'cytoplasm']
+Frames: 9558-9564 
+Class: abortive_central_channel
+Dwell Time: 5 frame(s)
+Average Distances:[('cytoplasmic_fibril', 23.0), ('cytoplasmic_fibril', 25.49)]
+------------------------------------------------------------------
+Complete #80: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 9568-9571 
+Class: docking_event
+Dwell Time: 2 frame(s)
+Average Distances:[('cytoplasmic_fibril', 37.49)]
+------------------------------------------------------------------
+Complete #81: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 9596-9598 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #82: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 9601-9603 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #83: ['cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 9710-9713 
+Class: docking_event
+Dwell Time: 1 frame(s)
+Average Distances:[('cytoplasm', 10.73)]
+------------------------------------------------------------------
+Complete #84: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 9759-9761 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #85: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 9836-9838 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #86: ['cytoplasm', 'cytoplasm', 'central_scaffold1', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 9868-9883 
+Class: abortive_central_channel
+Dwell Time: 10 frame(s)
+Average Distances:[('cytoplasm', 15.31), ('cytoplasmic_fibril', 34.87), ('cytoplasmic_fibril', 26.41), ('cytoplasmic_fibril', 25.36), ('cytoplasmic_fibril', 35.55), ('cytoplasmic_fibril', 15.91)]
+------------------------------------------------------------------
+Complete #87: ['cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'central_scaffold2', 'central_scaffold2', 'cytoplasm']
+Frames: 10016-10022 
+Class: abortive_central_channel
+Dwell Time: 4 frame(s)
+Average Distances:[('cytoplasm', 29.02), ('cytoplasmic_fibril', 11.28), ('central_scaffold2', 21.16)]
+------------------------------------------------------------------
+Complete #88: ['cytoplasm', 'central_scaffold2', 'cytoplasm']
+Frames: 10145-10147 
+Class: abortive_central_channel
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #89: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'central_scaffold1', 'cytoplasm']
+Frames: 10259-10269 
+Class: abortive_central_channel
+Dwell Time: 9 frame(s)
+Average Distances:[('cytoplasmic_fibril', 54.35), ('cytoplasmic_fibril', 77.15), ('cytoplasmic_fibril', 68.16), ('cytoplasmic_fibril', 54.07), ('cytoplasmic_fibril', 16.56), ('cytoplasmic_fibril', 23.88), ('cytoplasmic_fibril', 48.61)]
+------------------------------------------------------------------
+Complete #90: ['cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 10313-10316 
+Class: docking_event
+Dwell Time: 1 frame(s)
+Average Distances:[('cytoplasm', 1.48)]
+------------------------------------------------------------------
+Complete #91: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 10566-10571 
+Class: docking_event
+Dwell Time: 3 frame(s)
+Average Distances:[('cytoplasmic_fibril', 35.47)]
+------------------------------------------------------------------
+Complete #92: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 10588-10590 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #93: ['cytoplasm', 'cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 10729-10734 
+Class: docking_event
+Dwell Time: 2 frame(s)
+Average Distances:[('cytoplasm', 31.75), ('cytoplasm', 9.11), ('cytoplasmic_fibril', 32.37)]
+------------------------------------------------------------------
+Complete #94: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 10821-10823 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #95: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 10946-10948 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #96: ['cytoplasm', 'cytoplasmic_fibril', 'central_scaffold2', 'cytoplasm']
+Frames: 11113-11116 
+Class: abortive_central_channel
+Dwell Time: 2 frame(s)
+------------------------------------------------------------------
+Complete #97: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 11206-11208 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #98: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'central_scaffold2', 'cytoplasmic_fibril', 'central_scaffold2', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 11379-11391 
+Class: abortive_central_channel
+Dwell Time: 11 frame(s)
+Average Distances:[('cytoplasmic_fibril', 14.05), ('cytoplasmic_fibril', 7.58), ('cytoplasmic_fibril', 6.6), ('cytoplasmic_fibril', 71.92), ('cytoplasmic_fibril', 37.2), ('cytoplasmic_fibril', 5.65)]
+------------------------------------------------------------------
+Complete #99: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 11459-11465 
+Class: docking_event
+Dwell Time: 4 frame(s)
+Average Distances:[('cytoplasmic_fibril', 0.7), ('cytoplasmic_fibril', 12.29)]
+------------------------------------------------------------------
+Complete #100: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 11498-11500 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #101: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 11599-11601 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #102: ['cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 11649-11652 
+Class: docking_event
+Dwell Time: 1 frame(s)
+Average Distances:[('cytoplasm', 51.32)]
+------------------------------------------------------------------
+Complete #103: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 11655-11657 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #104: ['cytoplasm', 'cytoplasm', 'central_scaffold2', 'cytoplasm']
+Frames: 11662-11665 
+Class: abortive_central_channel
+Dwell Time: 1 frame(s)
+Average Distances:[('cytoplasm', 55.03)]
+------------------------------------------------------------------
+Complete #105: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 11974-11976 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #106: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 12019-12022 
+Class: docking_event
+Dwell Time: 2 frame(s)
+Average Distances:[('cytoplasmic_fibril', 61.62)]
+------------------------------------------------------------------
+Complete #107: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 12026-12028 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #108: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 12032-12038 
+Class: docking_event
+Dwell Time: 2 frame(s)
+Average Distances:[('cytoplasm', 30.92), ('cytoplasm', 34.48)]
+------------------------------------------------------------------
+Complete #109: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 12091-12093 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #110: ['cytoplasm', 'cytoplasmic_fibril', 'central_scaffold2', 'central_scaffold1', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 12114-12131 
+Class: abortive_central_channel
+Dwell Time: 12 frame(s)
+Average Distances:[('cytoplasmic_fibril', 31.7), ('cytoplasmic_fibril', 15.62), ('cytoplasmic_fibril', 33.07), ('cytoplasm', 6.77), ('cytoplasmic_fibril', 20.04), ('cytoplasmic_fibril', 41.25)]
+------------------------------------------------------------------
+Complete #111: ['cytoplasm', 'cytoplasm', 'cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'central_scaffold2', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 12185-12193 
+Class: abortive_central_channel
+Dwell Time: 4 frame(s)
+Average Distances:[('cytoplasm', 17.3), ('cytoplasm', 31.92), ('cytoplasm', 19.05), ('cytoplasmic_fibril', 57.69)]
+------------------------------------------------------------------
+Complete #112: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 12197-12201 
+Class: docking_event
+Dwell Time: 3 frame(s)
+Average Distances:[('cytoplasmic_fibril', 59.33), ('cytoplasmic_fibril', 14.29)]
+------------------------------------------------------------------
+Complete #113: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 12224-12228 
+Class: docking_event
+Dwell Time: 3 frame(s)
+Average Distances:[('cytoplasmic_fibril', 48.87), ('cytoplasmic_fibril', 37.84)]
+------------------------------------------------------------------
+Complete #114: ['cytoplasm', 'cytoplasm', 'cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 12283-12288 
+Class: docking_event
+Dwell Time: 1 frame(s)
+Average Distances:[('cytoplasm', 16.48), ('cytoplasm', 4.17), ('cytoplasm', 7.53)]
+------------------------------------------------------------------
+Complete #115: ['cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 12403-12407 
+Class: docking_event
+Dwell Time: 2 frame(s)
+Average Distances:[('cytoplasm', 18.05), ('cytoplasmic_fibril', 26.16)]
+------------------------------------------------------------------
+Complete #116: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 12411-12413 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #117: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 12468-12470 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #118: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 12483-12485 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #119: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'central_scaffold1', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 12536-12545 
+Class: abortive_central_channel
+Dwell Time: 8 frame(s)
+Average Distances:[('cytoplasmic_fibril', 23.44), ('cytoplasmic_fibril', 33.22), ('cytoplasmic_fibril', 15.7), ('cytoplasmic_fibril', 14.11), ('cytoplasmic_fibril', 39.11)]
+------------------------------------------------------------------
+Complete #120: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 12609-12614 
+Class: docking_event
+Dwell Time: 4 frame(s)
+Average Distances:[('cytoplasmic_fibril', 3.94), ('cytoplasmic_fibril', 14.73), ('cytoplasmic_fibril', 15.45)]
+------------------------------------------------------------------
+Complete #121: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasm', 'cytoplasm', 'cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 12644-12653 
+Class: docking_event
+Dwell Time: 3 frame(s)
+Average Distances:[('cytoplasm', 18.15), ('cytoplasm', 69.61), ('cytoplasm', 66.46), ('cytoplasm', 46.43), ('cytoplasmic_fibril', 43.51)]
+------------------------------------------------------------------
+Complete #122: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 12669-12672 
+Class: docking_event
+Dwell Time: 2 frame(s)
+Average Distances:[('cytoplasmic_fibril', 52.27)]
+------------------------------------------------------------------
+Complete #123: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 12689-12691 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #124: ['cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 12694-12697 
+Class: docking_event
+Dwell Time: 1 frame(s)
+Average Distances:[('cytoplasm', 38.09)]
+------------------------------------------------------------------
+Complete #125: ['cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 12735-12744 
+Class: docking_event
+Dwell Time: 6 frame(s)
+Average Distances:[('cytoplasm', 36.34), ('cytoplasmic_fibril', 23.76), ('cytoplasmic_fibril', 20.92), ('cytoplasmic_fibril', 6.42), ('cytoplasmic_fibril', 16.17)]
+------------------------------------------------------------------
+Complete #126: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 12792-12795 
+Class: docking_event
+Dwell Time: 2 frame(s)
+Average Distances:[('cytoplasmic_fibril', 37.97)]
+------------------------------------------------------------------
+Complete #127: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 12857-12860 
+Class: docking_event
+Dwell Time: 2 frame(s)
+Average Distances:[('cytoplasmic_fibril', 42.85)]
+------------------------------------------------------------------
+Complete #128: ['cytoplasm', 'cytoplasmic_fibril', 'central_scaffold1', 'central_scaffold2', 'cytoplasm']
+Frames: 12876-12880 
+Class: abortive_central_channel
+Dwell Time: 3 frame(s)
+------------------------------------------------------------------
+Complete #129: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 13005-13007 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #130: ['cytoplasm', 'central_scaffold2', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 13067-13070 
+Class: abortive_central_channel
+Dwell Time: 2 frame(s)
+------------------------------------------------------------------
+Complete #131: ['cytoplasm', 'central_scaffold1', 'cytoplasm']
+Frames: 13094-13096 
+Class: abortive_central_channel
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #132: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 13102-13104 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #133: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 13192-13196 
+Class: docking_event
+Dwell Time: 3 frame(s)
+Average Distances:[('cytoplasmic_fibril', 19.33), ('cytoplasmic_fibril', 56.82)]
+------------------------------------------------------------------
+Complete #134: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 13511-13513 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #135: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 13551-13555 
+Class: docking_event
+Dwell Time: 2 frame(s)
+------------------------------------------------------------------
+Complete #136: ['cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 13558-13561 
+Class: docking_event
+Dwell Time: 1 frame(s)
+Average Distances:[('cytoplasm', 56.41)]
+------------------------------------------------------------------
+Complete #137: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 13581-13583 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #138: ['cytoplasm', 'central_scaffold2', 'cytoplasm']
+Frames: 13605-13607 
+Class: abortive_central_channel
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #139: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 13636-13638 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #140: ['cytoplasm', 'cytoplasmic_fibril', 'central_scaffold2', 'cytoplasm']
+Frames: 13759-13762 
+Class: abortive_central_channel
+Dwell Time: 2 frame(s)
+------------------------------------------------------------------
+Complete #141: ['cytoplasm', 'cytoplasmic_fibril', 'central_scaffold2', 'cytoplasm']
+Frames: 13843-13846 
+Class: abortive_central_channel
+Dwell Time: 2 frame(s)
+------------------------------------------------------------------
+Complete #142: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 13856-13859 
+Class: docking_event
+Dwell Time: 2 frame(s)
+Average Distances:[('cytoplasmic_fibril', 4.53)]
+------------------------------------------------------------------
+Complete #143: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 13881-13888 
+Class: docking_event
+Dwell Time: 5 frame(s)
+Average Distances:[('cytoplasmic_fibril', 46.21), ('cytoplasmic_fibril', 17.74), ('cytoplasmic_fibril', 41.93)]
+------------------------------------------------------------------
+Complete #144: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 13941-13943 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #145: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 13993-13997 
+Class: docking_event
+Dwell Time: 3 frame(s)
+Average Distances:[('cytoplasmic_fibril', 32.6), ('cytoplasmic_fibril', 38.91)]
+------------------------------------------------------------------
+Complete #146: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 14010-14012 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #147: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 14054-14057 
+Class: docking_event
+Dwell Time: 2 frame(s)
+Average Distances:[('cytoplasmic_fibril', 31.53)]
+------------------------------------------------------------------
+Complete #148: ['cytoplasm', 'central_scaffold2', 'cytoplasm']
+Frames: 14123-14125 
+Class: abortive_central_channel
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #149: ['cytoplasm', 'central_scaffold2', 'cytoplasm']
+Frames: 14183-14185 
+Class: abortive_central_channel
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #150: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 14404-14410 
+Class: docking_event
+Dwell Time: 3 frame(s)
+Average Distances:[('cytoplasmic_fibril', 85.28), ('cytoplasm', 52.04)]
+------------------------------------------------------------------
+Complete #151: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 14568-14571 
+Class: docking_event
+Dwell Time: 2 frame(s)
+Average Distances:[('cytoplasmic_fibril', 38.29)]
+------------------------------------------------------------------
+Complete #152: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 14592-14594 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #153: ['cytoplasm', 'cytoplasm', 'cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 14680-14685 
+Class: docking_event
+Dwell Time: 1 frame(s)
+Average Distances:[('cytoplasm', 7.48), ('cytoplasm', 19.94), ('cytoplasm', 27.35)]
+------------------------------------------------------------------
+Complete #154: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 14688-14692 
+Class: docking_event
+Dwell Time: 3 frame(s)
+Average Distances:[('cytoplasmic_fibril', 30.44), ('cytoplasmic_fibril', 83.18)]
+------------------------------------------------------------------
+Complete #155: ['cytoplasm', 'cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 14704-14708 
+Class: docking_event
+Dwell Time: 1 frame(s)
+Average Distances:[('cytoplasm', 38.24), ('cytoplasm', 11.72)]
+------------------------------------------------------------------
+Complete #156: ['cytoplasm', 'cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 14799-14802 
+Class: docking_event
+Dwell Time: 1 frame(s)
+Average Distances:[('cytoplasm', 60.7)]
+------------------------------------------------------------------
+Complete #157: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 14846-14848 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+Complete #158: ['cytoplasm', 'cytoplasmic_fibril', 'cytoplasm']
+Frames: 14858-14860 
+Class: docking_event
+Dwell Time: 1 frame(s)
+------------------------------------------------------------------
+
+Regional Average Distances: Nucleus: Nonenm, NuclearBasket: Nonenm, CentralScaffold1: Nonenm, CentralScaffold2: 40.76nm, CytoplasmicFibril: 32.03nm, Cytoplasm: 31.83nm

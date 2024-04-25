@@ -9,6 +9,7 @@ def normalize(df, PXL_SIZE):
     yAvg = df["Y"].mean()
     df["X"] = list(map(lambda x: x-xAvg, df.loc[:,"X"]))
     df["Y"] = list(map(lambda x: x-yAvg, df.loc[:,"Y"]))
+    return df
 
 def closest_point_on_segment(segment, point):
     p1, p2 = segment

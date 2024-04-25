@@ -1,0 +1,6 @@
+,StartFrame,EndFrame,Class,DwellTime,Nucleus,NuclearBasket,CentralScaffold1,CentralScaffold2,CytoplasmicFibril,Cytoplasm
+0,10171,10175,abortive_cytoplasmic_fibril,2,32.25,,,,,
+1,13394,13396,docking_event,1,,,,,,
+2,14667,14669,successful,1,,,,,,
+3,16574,16576,abortive_central_channel,1,,,,,,
+4,19540,19543,abortive_central_channel,1,51.68,,,,,

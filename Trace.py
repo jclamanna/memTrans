@@ -14,58 +14,72 @@ class Trace:
     sameRegionDists = []
     regions = []
 
-    def __init__(self, ptList,frames,direction):
+    def __init__(self, ptList,frames):
         self.trajectory = ptList
         self.frames = frames
-        self.direction = direction
     
     def __str__(self):
         return("".join(str(self.trajectory)))
     
     def setRegions(self, regions):
         self.regions = regions
+    
+    def setDirection(self, dir):
+        self.direction = dir
 
     def prune(self):
         prev = ""
         start_index = None
         end_index = None
-        target = "nucleus" if self.direction == 1 else "cytoplasm"
-        opposite = "cytoplasm" if self.direction == 1 else "nucleus"
 
-        if target not in self.regions:
-            self.classification="incomplete"
-            return True
-        if len(set(self.regions)) == 1:
+        if self.direction==1:
+            origin="cytoplasm"
+            target="nucleus"
+        elif self.direction==2:
+            origin="nucleus"
+            target="cytoplasm"
+
+        if origin not in self.regions:
             self.classification="incomplete"
             return True
 
         for c, r in enumerate(self.regions):
             # Handle the first element in the list
-            if c == 0 and r == target:
-                if self.regions[1] == opposite:
-                    self.classification="incomplete"
-                    return True
-                elif self.regions[1] != target:
-                    start_index = 0
-                    continue
+            if c == 0:
+                if r == origin:
+                    if self.regions[1] == target:
+                        self.classification="incomplete"
+                        return True
+                    elif self.regions[1] != origin:
+                        start_index = 0
+                        continue
+                else: 
+                    if self.regions[1] == origin:
+                        start_index = 1
+                        continue
+                    else:
+                        self.classification="incomplete"
+                        return True
+ 
             # Check if the previous region was the target (nucleus or cytoplasm)
-            if prev == target:
-                if r == opposite:
+            if prev == origin:
+                if r == target:
                     self.classification="incomplete"
                     return True
                 elif r != target and start_index is None:
                     start_index = c - 1
                     continue
+
             if start_index is not None:
                 # Determine the end_index based on the current region
-                if r == opposite:
-                    if c + 1 < len(self.regions) and self.regions[c + 1] == opposite:
+                if r == target:
+                    if c + 1 < len(self.regions) and self.regions[c + 1] == target:
                         end_index = c + 1
                         break
                     else:
                         end_index = c
                         break
-                elif r == target and prev != target:
+                elif r == origin and prev != origin:
                     end_index = c
             prev = r 
             
@@ -73,30 +87,31 @@ class Trace:
             self.regions = self.regions[start_index:end_index + 1]
             self.trajectory = self.trajectory[start_index:end_index + 1]
             self.frames = self.frames[start_index:end_index + 1]
-        if self.regions[0] != target or (self.regions[-1] != target and self.regions[-1] != opposite):
+
+        if (self.regions[0] != origin) or (self.regions[-1] != origin and self.regions[-1] != target) or (len(self.regions) <= 1) or (len(set(self.regions))==1):
             self.classification="incomplete"
             return True
             
         return False
     
     def isSuccess(self):
-        target = "nucleus" if self.direction != 1 else "cytoplasm"
+        target = "nucleus" if self.direction == 1 else "cytoplasm"
         if target in self.regions:
             return True
         return False
     
     def crossedMidline(self):
         if self.direction == 1:
-            midZones = ["central_scaffold2","cytoplasmic_fibril","cytoplasm"]
-        else:
             midZones = ["central_scaffold1","nuclear_basket","nucleus"]
+        else:
+            midZones = ["central_scaffold2","cytoplasmic_fibril","cytoplasm"]
         for zone in midZones:
             if zone in self.regions:
                 return True
         return False
     
     def deepestRegion(self):
-        order = ["nucleus","nuclear_basket","central_scaffold1","central_scaffold2","cytoplasmic_fibril","cytoplasm"] if self.direction == 1 else ["cytoplasm","cytoplasmic_fibril","central_scaffold2","central_scaffold1","nuclear_basket","nucleus"]
+        order = ["nucleus","nuclear_basket","central_scaffold1","central_scaffold2","cytoplasmic_fibril","cytoplasm"] if self.direction != 1 else ["cytoplasm","cytoplasmic_fibril","central_scaffold2","central_scaffold1","nuclear_basket","nucleus"]
         regionIndex =[]
         for r in self.regions:
             regionIndex.append(order.index(r))
@@ -112,15 +127,26 @@ class Trace:
             return None
         
         deep = self.deepestRegion()
-        if self.direction == 1:
+        # print(deep)
+        if self.direction != 1:
             if deep == "nuclear_basket":
                 self.classification="docking_event"
                 return None
             elif deep == "central_scaffold1" or deep == "central_scaffold2":
-                self.classification="failure_central_channel"
+                self.classification="abortive_central_channel"
                 return None
             elif deep == "cytoplasmic_fibril":
-                self.classification = "failure_cytoplasmic_fibril"
+                self.classification = "abortive_cytoplasmic_fibril"
+                return None
+        else:
+            if deep == "cytoplasmic_fibril":
+                self.classification="docking_event"
+                return None
+            elif deep == "central_scaffold1" or deep == "central_scaffold2":
+                self.classification="abortive_central_channel"
+                return None
+            elif deep == "nuclear_basket":
+                self.classification = "abortive_nuclear_basket"
                 return None
     
     def setAvgDist(self):

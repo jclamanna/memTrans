@@ -1,12 +1,9 @@
-import pandas as pd
-import math
-import scipy
 from helpers import find_closest_lines,normalize
 from Trace import Trace
 
 class Membrane:
     bounds = None
-    roi=500
+    roi=5000000000
     regions={
         (None, "bsk"): "nucleus",
         ("bsk", "nucChnl"): "nuclear_basket",
@@ -36,7 +33,7 @@ class Membrane:
             df.iloc[:,8:10]]
         for c,key in enumerate(lineDict.keys()):
             tupList=[]
-            for i,j in lines[c].iterrows():
+            for _,j in lines[c].iterrows():
                 tupList.append((j[0],j[1]))
             lineDict[key]=tupList
         return(lineDict)
@@ -61,19 +58,23 @@ class Membrane:
                 else:
                     return False
                 
-    def traceParce(self,df,direction,pxl_size):
+    def traceParce(self,df,direction,pxl_size,norm):
         df = df[['Frame','X','Y']].copy()
-        normalize(df,pxl_size)
+        if norm:
+            df = normalize(df,pxl_size)
         df = df.sort_values(by='Frame')
         prevFrame = None
         traceList=[]
         tracePts=[]
         frames=[]
         for key,row in df.iterrows():
+            # print(row)
             if self.checkROI(row["X"],row["Y"]):
                 if prevFrame != None and row['Frame'] != prevFrame+1:
                     if len(tracePts) > 2:
-                        trace = Trace(tracePts,frames,direction)
+                        trace = Trace(tracePts,frames)
+                        self.locatePoints(trace)
+                        trace.setDirection(direction) 
                         traceList.append(trace)
                     tracePts=[]
                     frames=[]
@@ -82,13 +83,12 @@ class Membrane:
                 prevFrame = row['Frame']
         return traceList
 
-    def locatePoints(self, traceList):
-        for trace in traceList:
-            regionList=[]
-            for point in trace.trajectory:
-                left_line, right_line = find_closest_lines(self.bounds, point)
-                regionList.append(self.getRegion(left_line,right_line))
-            trace.setRegions(regionList)
+    def locatePoints(self, trace):
+        regionList=[]
+        for point in trace.trajectory:
+            left_line, right_line = find_closest_lines(self.bounds, point)
+            regionList.append(self.getRegion(left_line,right_line))
+        trace.setRegions(regionList)
     
     def getRegion(self, left_line,right_line):
         return self.regions.get((left_line, right_line), None)
