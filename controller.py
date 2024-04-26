@@ -40,7 +40,7 @@ parser.add_argument("--plot_incomplete","-pi", help="Plots incomplete traces", a
 parser.add_argument("--imp","-i", help="Use this flag if all data is import", action="store_true")
 parser.add_argument("--exp","-e", help="Use this flag if all data is export", action="store_true")
 parser.add_argument("--normalize", '-n', help="Normalize trace points by given pixel size.", action="store_true")
-parser.add_argument('--frame_time', '-ft', type=float, help='Specify the frame time in seconds.')
+parser.add_argument('--frame_time', '-ft', type=float, help='Specify the frame time in miliseconds?')
 
 
 args = parser.parse_args()
