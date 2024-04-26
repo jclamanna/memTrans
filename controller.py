@@ -8,6 +8,29 @@ import os
 import shutil
 import argparse
 
+
+
+def plotTrace(trace, out_path):
+    plt.figure(figsize=(5,15))
+    plt.xlim(-400,300)
+    plt.title(f"Frames: {int(trace.frames[0])}-{int(trace.frames[-1])} | Class: {trace.classification}")
+    plt.plot(*zip(*memb.bounds['midline']), marker='o', color="blue",markersize=1)
+    plt.plot(*zip(*memb.bounds['npcCyto']), marker='o', color="orange",markersize=1)
+    plt.plot(*zip(*memb.bounds['bsk']), marker='o', color="green",markersize=1)
+    plt.plot(*zip(*memb.bounds['nucChnl']), marker='o', color="red",markersize=1)
+    plt.plot(*zip(*memb.bounds['cytChnl']), marker='o', color="purple",markersize=1)
+
+    plt.plot(*zip(*trace.trajectory), marker='o', color="pink",markersize=3)
+    for c,x in enumerate(trace.trajectory):
+        plt.text(x[0],x[1],str(c+1),fontsize=8)
+
+    plt.legend(list(memb.bounds.keys()))
+
+    plt.savefig(f"{out_path}/traces/{trace.classification}/Trace{int(trace.frames[0])}-{int(trace.frames[-1])}.png")
+    if trace.crossedMidline():
+            plt.savefig(f"{out_path}/traces/midline/Trace{int(trace.frames[0])}-{int(trace.frames[-1])}.png")
+    plt.close()
+
 parser = argparse.ArgumentParser()
 parser.add_argument("membrane", help="Path to membrane csv file")
 parser.add_argument("trace", help="Path to traces csv file")
@@ -16,6 +39,7 @@ parser.add_argument("--plot","-p", help="Plot traces", action="store_true")
 parser.add_argument("-i", help="Use this flag if all data is import", action="store_true")
 parser.add_argument("-e", help="Use this flag if all data is export", action="store_true")
 parser.add_argument("--normalize", '-n', help="Normalize trace points by given pixel size.", action="store_true")
+parser.add_argument("--plot_incomplete","-pi", help="Plots incomplete traces", action="store_true")
 
 args = parser.parse_args()
 
@@ -68,7 +92,11 @@ for c, trace in enumerate(traceList):
 print(f"Out of {len(traceList)} traces there were: \n-{len(completeTraces)} complete traces\n-{len(incompleteTraces)} incomplete traces")
 print(f"Total Time Spent: {round((time.time()-start),2)} seconds")
 
-out_path=f"./output/{args.trace.split('/')[1].split('.')[0]}"
+if DIRECTION == 1:
+    out_path=f"./output/{args.trace.split('/')[1].split('.')[0]}_import"
+elif DIRECTION == 2:
+    out_path=f"./output/{args.trace.split('/')[1].split('.')[0]}_export"
+
 if os.path.exists(f"{out_path}/traces"):
     shutil.rmtree(f"{out_path}/traces")
 else:
@@ -80,6 +108,7 @@ os.mkdir(f"{out_path}/traces/abortive_central_channel")
 os.mkdir(f"{out_path}/traces/abortive_cytoplasmic_fibril")
 os.mkdir(f"{out_path}/traces/abortive_nuclear_basket")
 os.mkdir(f"{out_path}/traces/midline")
+os.mkdir(f"{out_path}/traces/incomplete")
 
 regDistsTotal = {"nucleus":[],"nuclear_basket":[],"central_scaffold1":[],"central_scaffold2":[],"cytoplasmic_fibril":[],"cytoplasm":[]}
 output=[]
@@ -115,27 +144,10 @@ for c1, trace in enumerate(completeTraces):
     if args.plot:
         if c1 == 0:
             print("Plotting complete traces...")
-        plt.figure(figsize=(5,15))
-        plt.xlim(-400,300)
-        plt.title(f"Frames: {int(trace.frames[0])}-{int(trace.frames[-1])} | Class: {trace.classification}")
-        plt.plot(*zip(*memb.bounds['midline']), marker='o', color="blue",markersize=1)
-        plt.plot(*zip(*memb.bounds['npcCyto']), marker='o', color="orange",markersize=1)
-        plt.plot(*zip(*memb.bounds['bsk']), marker='o', color="green",markersize=1)
-        plt.plot(*zip(*memb.bounds['nucChnl']), marker='o', color="red",markersize=1)
-        plt.plot(*zip(*memb.bounds['cytChnl']), marker='o', color="purple",markersize=1)
-
-        plt.plot(*zip(*trace.trajectory), marker='o', color="pink",markersize=3)
-        for c,x in enumerate(trace.trajectory):
-            plt.text(x[0],x[1],str(c+1),fontsize=8)
-
-        plt.legend(list(memb.bounds.keys()))
-
-        plt.savefig(f"{out_path}/traces/{trace.classification}/Trace{int(trace.frames[0])}-{int(trace.frames[-1])}.png")
-        if trace.crossedMidline():
-                plt.savefig(f"{out_path}/traces/midline/Trace{int(trace.frames[0])}-{int(trace.frames[-1])}.png")
-        plt.close()
-
+        plotTrace(trace,out_path)
+       
 print("------------------------------------------------------------------\n")
+#--------------------------PLOT ALL TRACES----------------------------------
 plt.figure(figsize=(5,15))
 for c1, trace in enumerate(completeTraces):
     plt.xlim(-400,300)
@@ -146,16 +158,18 @@ for c1, trace in enumerate(completeTraces):
         plt.plot(*zip(*memb.bounds['bsk']), marker='o', color="green",markersize=1)
         plt.plot(*zip(*memb.bounds['nucChnl']), marker='o', color="red",markersize=1)
         plt.plot(*zip(*memb.bounds['cytChnl']), marker='o', color="purple",markersize=1)
-
     plt.plot(*zip(*trace.trajectory), marker='o', color="pink",markersize=3)
-
 plt.legend(list(memb.bounds.keys()))
-
 plt.savefig(f"{out_path}/traces/AllTraces.png") 
 plt.close()
 
+if args.plot_incomplete:
+    for c1, trace in enumerate(incompleteTraces):
+        if len(trace.regions) <= 2:
+            continue
+        plotTrace(trace,out_path)
 
-
+#-------------------------------------AVERAGE DISTS--------------------------
 nucTot=round(mean(regDistsTotal['nucleus']),2) if len(regDistsTotal['nucleus']) > 0 else None
 nucBaskTot=round(mean(regDistsTotal['nuclear_basket']),2) if len(regDistsTotal['nuclear_basket']) > 0 else None
 cs1Tot=round(mean(regDistsTotal['central_scaffold1']),2) if len(regDistsTotal['central_scaffold1']) > 0 else None
