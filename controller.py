@@ -36,17 +36,20 @@ parser.add_argument("membrane", help="Path to membrane csv file")
 parser.add_argument("trace", help="Path to traces csv file")
 parser.add_argument("pxl_size", help="PXL_SIZE used for membrane/trace data", type=int)
 parser.add_argument("--plot","-p", help="Plot traces", action="store_true")
-parser.add_argument("-i", help="Use this flag if all data is import", action="store_true")
-parser.add_argument("-e", help="Use this flag if all data is export", action="store_true")
-parser.add_argument("--normalize", '-n', help="Normalize trace points by given pixel size.", action="store_true")
 parser.add_argument("--plot_incomplete","-pi", help="Plots incomplete traces", action="store_true")
+parser.add_argument("--imp","-i", help="Use this flag if all data is import", action="store_true")
+parser.add_argument("--exp","-e", help="Use this flag if all data is export", action="store_true")
+parser.add_argument("--normalize", '-n', help="Normalize trace points by given pixel size.", action="store_true")
+parser.add_argument('--frame_time', '-ft', type=float, help='Specify the frame time in seconds.')
+
 
 args = parser.parse_args()
 
 PXL_SIZE=args.pxl_size
+FRAME_TIME=args.frame_time
 NORMALIZE=args.normalize
-IMPORT=args.i
-EXPORT=args.e
+IMPORT=args.imp
+EXPORT=args.exp
 DIRECTION=None
 
 if IMPORT:
@@ -63,7 +66,6 @@ df2 = pd.read_csv(args.trace)
 
 completeDict={}
 incompleteDict={}
-
 
 memb = Membrane(df)
 
@@ -116,7 +118,10 @@ for c1, trace in enumerate(completeTraces):
     regDistsTrace = {"nucleus":[],"nuclear_basket":[],"central_scaffold1":[],"central_scaffold2":[],"cytoplasmic_fibril":[],"cytoplasm":[]}
     print("------------------------------------------------------------------")
     print(f"Complete #{c1}: {trace.regions}")
-    print(f"Frames: {int(trace.frames[0])}-{int(trace.frames[-1])} \nClass: {trace.classification}\nDwell Time: {trace.dwellTime} frame(s)")
+    if FRAME_TIME != None:
+        print(f"Frames: {int(trace.frames[0])}-{int(trace.frames[-1])} \nClass: {trace.classification}\nDwell Time: {trace.dwellTime*FRAME_TIME} ms?")
+    else:
+        print(f"Frames: {int(trace.frames[0])}-{int(trace.frames[-1])} \nClass: {trace.classification}\nDwell Time: {trace.dwellTime} frame(s)")
     if len(trace.sameRegionDists) > 0 :
         print(f'Average Distances:{trace.sameRegionDists}')
         for dist in trace.sameRegionDists:
@@ -130,15 +135,26 @@ for c1, trace in enumerate(completeTraces):
     cf=round(mean(regDistsTrace['cytoplasmic_fibril']),2) if len(regDistsTrace['cytoplasmic_fibril'])> 0  else None
     cyto=round(mean(regDistsTrace['cytoplasm']),2) if len(regDistsTrace['cytoplasm']) > 0 else None
     
-    outDict={'StartFrame':int(trace.frames[0]),'EndFrame':int(trace.frames[-1]),
-                    'Class':trace.classification,'DwellTime':trace.dwellTime,
-                    'Nucleus':nuc,
-                    'NuclearBasket':nucBask,
-                    'CentralScaffold1':cs1,
-                    'CentralScaffold2':cs2,
-                    'CytoplasmicFibril':cf,
-                    'Cytoplasm':cyto
-                }
+    if FRAME_TIME!=None:
+        outDict={'StartFrame':int(trace.frames[0]),'EndFrame':int(trace.frames[-1]),
+                        'Class':trace.classification,'DwellTime':trace.dwellTime*FRAME_TIME,
+                        'Nucleus':nuc,
+                        'NuclearBasket':nucBask,
+                        'CentralScaffold1':cs1,
+                        'CentralScaffold2':cs2,
+                        'CytoplasmicFibril':cf,
+                        'Cytoplasm':cyto
+                    }
+    else:
+       outDict={'StartFrame':int(trace.frames[0]),'EndFrame':int(trace.frames[-1]),
+                        'Class':trace.classification,'DwellTime':trace.dwellTime,
+                        'Nucleus':nuc,
+                        'NuclearBasket':nucBask,
+                        'CentralScaffold1':cs1,
+                        'CentralScaffold2':cs2,
+                        'CytoplasmicFibril':cf,
+                        'Cytoplasm':cyto
+                    } 
     output.append(outDict)
     
     if args.plot:
@@ -177,12 +193,12 @@ cs2Tot=round(mean(regDistsTotal['central_scaffold2']),2) if len(regDistsTotal['c
 cfTot=round(mean(regDistsTotal['cytoplasmic_fibril']),2) if len(regDistsTotal['cytoplasmic_fibril'])> 0  else None
 cytoTot=round(mean(regDistsTotal['cytoplasm']),2) if len(regDistsTotal['cytoplasm']) > 0 else None
 
-print(f"Regional Average Distances: Nucleus: {nucTot}nm, " +
-        f"NuclearBasket: {nucBaskTot}nm, " +
-        f"CentralScaffold1: {cs1Tot}nm, " +
-        f"CentralScaffold2: {cs2Tot}nm, " +
-        f"CytoplasmicFibril: {cfTot}nm, " +
-        f"Cytoplasm: {cytoTot}nm")
+print(f"Regional Average Distances: Nucleus: {nucTot} nm, " +
+        f"NuclearBasket: {nucBaskTot} nm, " +
+        f"CentralScaffold1: {cs1Tot} nm, " +
+        f"CentralScaffold2: {cs2Tot} nm, " +
+        f"CytoplasmicFibril: {cfTot} nm, " +
+        f"Cytoplasm: {cytoTot} nm")
 
 pd.DataFrame(output).to_csv(f"{out_path}/out.csv")
 
