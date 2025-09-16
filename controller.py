@@ -7,7 +7,7 @@ import time
 import os
 import shutil
 import argparse
-
+import csv
 
 
 def plotTrace(trace, out_path):
@@ -91,13 +91,15 @@ for c, trace in enumerate(traceList):
         # print(f"Incomplete: {trace.regions}")
 
 
-print(f"Out of {len(traceList)} traces there were: \n-{len(completeTraces)} complete traces\n-{len(incompleteTraces)} incomplete traces")
-print(f"Total Time Spent: {round((time.time()-start),2)} seconds")
+# print(f"Total Time Spent: {round((time.time()-start),2)} seconds")
+
 
 if DIRECTION == 1:
-    out_path=f"./output/{args.trace.split('/')[1].split('.')[0]}_import"
+    out_path=f"./output/{args.trace.split('/')[-1].split('.')[0]}_import"
+    directionString = "import"
 elif DIRECTION == 2:
-    out_path=f"./output/{args.trace.split('/')[1].split('.')[0]}_export"
+    out_path=f"./output/{args.trace.split('/')[-1].split('.')[0]}_export"
+    directionString = "export"
 
 if os.path.exists(f"{out_path}/traces"):
     shutil.rmtree(f"{out_path}/traces")
@@ -112,16 +114,25 @@ os.mkdir(f"{out_path}/traces/abortive_nuclear_basket")
 os.mkdir(f"{out_path}/traces/midline")
 os.mkdir(f"{out_path}/traces/incomplete")
 
-regDistsTotal = {"nucleus":[],"nuclear_basket":[],"central_scaffold1":[],"central_scaffold2":[],"cytoplasmic_fibril":[],"cytoplasm":[]}
 output=[]
+
+regDistsTotal = {"nucleus":[],"nuclear_basket":[],"central_scaffold1":[],"central_scaffold2":[],"cytoplasmic_fibril":[],"cytoplasm":[]}
+regionFails = {"nucleus":0,"nuclear_basket":0,"central_scaffold1":0,"central_scaffold2":0,"cytoplasmic_fibril":0,"cytoplasm":0}
+successes = 0
 for c1, trace in enumerate(completeTraces):
+    regionFails[trace.deepestRegion()] += 1
+    if trace.classification == "successful":
+        successes+=1
+
     regDistsTrace = {"nucleus":[],"nuclear_basket":[],"central_scaffold1":[],"central_scaffold2":[],"cytoplasmic_fibril":[],"cytoplasm":[]}
     print("------------------------------------------------------------------")
     print(f"Complete #{c1}: {trace.regions}")
+    
     if FRAME_TIME != None:
         print(f"Frames: {int(trace.frames[0])}-{int(trace.frames[-1])} \nClass: {trace.classification}\nDwell Time: {trace.dwellTime*FRAME_TIME} ms?")
     else:
         print(f"Frames: {int(trace.frames[0])}-{int(trace.frames[-1])} \nClass: {trace.classification}\nDwell Time: {trace.dwellTime} frame(s)")
+    
     if len(trace.sameRegionDists) > 0 :
         print(f'Average Distances:{trace.sameRegionDists}')
         for dist in trace.sameRegionDists:
@@ -135,26 +146,43 @@ for c1, trace in enumerate(completeTraces):
     cf=round(mean(regDistsTrace['cytoplasmic_fibril']),2) if len(regDistsTrace['cytoplasmic_fibril'])> 0  else None
     cyto=round(mean(regDistsTrace['cytoplasm']),2) if len(regDistsTrace['cytoplasm']) > 0 else None
     
+    propDict = trace.regionProportions()
+
     if FRAME_TIME!=None:
         outDict={'StartFrame':int(trace.frames[0]),'EndFrame':int(trace.frames[-1]),
-                        'Class':trace.classification,'DwellTime':trace.dwellTime*FRAME_TIME,
-                        'Nucleus':nuc,
-                        'NuclearBasket':nucBask,
-                        'CentralScaffold1':cs1,
-                        'CentralScaffold2':cs2,
-                        'CytoplasmicFibril':cf,
-                        'Cytoplasm':cyto
-                    }
+                'Class':trace.classification,'DwellTime':trace.dwellTime*FRAME_TIME,
+                'MSD': float(np.mean(trace.getMSD())),
+                'Nucleus_AvgDist':nuc,
+                'NuclearBasket_AvgDist':nucBask,
+                'CentralScaffold1_AvgDist':cs1,
+                'CentralScaffold2_AvgDist':cs2,
+                'CytoplasmicFibril_AvgDist':cf,
+                'Cytoplasm_AvgDist':cyto,
+                'Nucleus_Percent':propDict['nucleus'],
+                'NuclearBasket_Percent':propDict['nuclear_basket'],
+                'CentralScaffold1_Percent':propDict['central_scaffold1'],
+                'CentralScaffold2_Percent':propDict['central_scaffold2'],
+                'CytoplasmicFibril_Percent':propDict['cytoplasmic_fibril'],
+                'Cytoplasm_Percent':propDict['cytoplasm']
+                }
     else:
        outDict={'StartFrame':int(trace.frames[0]),'EndFrame':int(trace.frames[-1]),
-                        'Class':trace.classification,'DwellTime':trace.dwellTime,
-                        'Nucleus':nuc,
-                        'NuclearBasket':nucBask,
-                        'CentralScaffold1':cs1,
-                        'CentralScaffold2':cs2,
-                        'CytoplasmicFibril':cf,
-                        'Cytoplasm':cyto
-                    } 
+                'Class':trace.classification,'DwellTime':trace.dwellTime,
+                'MSD': float(np.mean(trace.getMSD())),
+                'Nucleus_AvgDist':nuc,
+                'NuclearBasket_AvgDist':nucBask,
+                'CentralScaffold1_AvgDist':cs1,
+                'CentralScaffold2_AvgDist':cs2,
+                'CytoplasmicFibril_AvgDist':cf,
+                'Cytoplasm_AvgDist':cyto,
+                'Nucleus_Percent':propDict['nucleus'],
+                'NuclearBasket_Percent':propDict['nuclear_basket'],
+                'CentralScaffold1_Percent':propDict['central_scaffold1'],
+                'CentralScaffold2_Percent':propDict['central_scaffold2'],
+                'CytoplasmicFibril_Percent':propDict['cytoplasmic_fibril'],
+                'Cytoplasm_Percent':propDict['cytoplasm']
+                }
+    
     output.append(outDict)
     
     if args.plot:
@@ -163,6 +191,10 @@ for c1, trace in enumerate(completeTraces):
         plotTrace(trace,out_path)
        
 print("------------------------------------------------------------------\n")
+
+efficiency = round((successes / len(completeTraces)) * 100,2)
+print(f"Out of {len(traceList)} traces there were: \n-{len(completeTraces)} complete traces\n-{len(incompleteTraces)} incomplete traces")
+
 #--------------------------PLOT ALL TRACES----------------------------------
 plt.figure(figsize=(5,15))
 for c1, trace in enumerate(completeTraces):
@@ -200,5 +232,17 @@ print(f"Regional Average Distances: Nucleus: {nucTot} nm, " +
         f"CytoplasmicFibril: {cfTot} nm, " +
         f"Cytoplasm: {cytoTot} nm")
 
-pd.DataFrame(output).to_csv(f"{out_path}/out.csv")
+pd.DataFrame(output).to_csv(f"{out_path}/out.csv",index=False)
+
+with open(f"./output/summaries_{directionString}.csv", "a+") as fp:
+    fp.seek(0)
+    lines = fp.readlines()
+    if len(lines) == 0:
+        fp.write("Video,Complete,Incomplete,Successful,Abortive,Efficiency,NucFail,BSKFail,CS1Fail,CS2Fail,CytoFibrilFail,CytoFail\n")
+
+    fp.seek(0)
+    if args.trace in fp.read():
+        None
+    else:
+        fp.write(f"{args.trace},{len(completeTraces)},{len(incompleteTraces)},{successes},{len(completeTraces)-successes},{efficiency}%,{regionFails['nucleus']},{regionFails['nuclear_basket']},{regionFails['central_scaffold1']},{regionFails['central_scaffold2']},{regionFails['cytoplasmic_fibril']},{regionFails['cytoplasm']}\n")
 

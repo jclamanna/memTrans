@@ -176,3 +176,19 @@ class Trace:
             if r != "nucleus" and r != "cytoplasm":
                 dt+=1
         self.dwellTime = dt
+
+    def regionProportions(self):
+        region_percent = {"nucleus":0,"nuclear_basket":0,"central_scaffold1":0,"central_scaffold2":0,"cytoplasmic_fibril":0,"cytoplasm":0}
+        for region in self.regions:
+            region_percent[region] = round((self.regions.count(region) / len(self.regions) ) * 100,2)
+        return region_percent
+    
+    def getMSD(self):
+        points = np.array(self.trajectory)
+        T = len(points)
+        msd = np.zeros(T - 1)
+        for tau in range(1, T):
+            displacements = points[tau:] - points[:-tau]
+            squared_displacements = np.sum(displacements**2, axis=1)
+            msd[tau - 1] = np.mean(squared_displacements)
+        return msd
